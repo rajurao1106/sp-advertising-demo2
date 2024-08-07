@@ -9,7 +9,7 @@ import ChooseUs from './components/ChooseUs/ChooseUs'
 import Contact from './components/Contact/Contact'
 import Showcase from './components/Showcase/Showcase'
 import WhatWeDo from './components/WhatWeDo/WhatWeDo'
-import { Route} from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
 import DigitalMarketing from './components/Services/DigitalMarketing'
 import OutdoorAdvertising from './components/Services/OutdoorAdvertising'
 import DesigningServices from './components/Services/DesigningServices'
@@ -55,25 +55,25 @@ AOS.init({
   return (
     <div>
       <Navbar/>
-        
-          <Route path='/sp-advertising-demo2/about-me' element={<AboutMe/>}/>
-          <Route path='/sp-advertising-demo2/choose-us' element={<ChooseUs/>}/>
-          <Route path='/sp-advertising-demo2/contact' element={<Contact/>}/>
-          <Route path="/sp-advertising-demo2/footer"element={<Footer/>}/>
-          <Route path="/sp-advertising-demo2"element={<Home/>} />
-          <Route path="/sp-advertising-demo2/navbar"element={<Navbar/>}/>
-          <Route path="/sp-advertising-demo2/read-more"element={<ScrollEffect/>}/>
-          <Route path="/sp-advertising-demo2/showcase"element={<Showcase/>}/>
-          <Route path="/sp-advertising-demo2/welcome-page"element={<WelcomePage/>}/>
-          <Route path="/sp-advertising-demo2/services"element={<WhatWeDo/>}/>
-          <Route path="/sp-advertising-demo2/Outdoor-Advertising"element={<OutdoorAdvertising/>}/>
-          <Route path="/sp-advertising-demo2/Digital-Marketing"element={<DigitalMarketing/>}/>
+        <Routes >
+          <Route path='/about-me' element={<AboutMe/>}/>
+          <Route path='/choose-us' element={<ChooseUs/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path="/footer"element={<Footer/>}/>
+          <Route path="/"element={<Home/>} />
+          <Route path="/navbar"element={<Navbar/>}/>
+          <Route path="/read-more"element={<ScrollEffect/>}/>
+          <Route path="/showcase"element={<Showcase/>}/>
+          <Route path="/welcome-page"element={<WelcomePage/>}/>
+          <Route path="/services"element={<WhatWeDo/>}/>
+          <Route path="/Outdoor-Advertising"element={<OutdoorAdvertising/>}/>
+          <Route path="/Digital-Marketing"element={<DigitalMarketing/>}/>
           <Route path="/Designing-Services"element={<DesigningServices/>}/>
-          <Route path="/sp-advertising-demo2/Print-Media"element={<PrintMedia/>}/>
-          <Route path="/sp-advertising-demo2/Branding-Strategy"element={<BrandingStrategy/>}/>
-          <Route path="/sp-advertising-demo2/Event-Promotion"element={<EventPromotion/>}/>
-          <Route path="/sp-advertising-demo2/Blog"element={<Blog/>}/>
-        
+          <Route path="/Print-Media"element={<PrintMedia/>}/>
+          <Route path="/Branding-Strategy"element={<BrandingStrategy/>}/>
+          <Route path="/Event-Promotion"element={<EventPromotion/>}/>
+          <Route path="/Blog"element={<Blog/>}/>
+        </Routes>
         
       <Footer/>
     </div>
